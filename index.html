@@ -11,46 +11,37 @@
     <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" />
   </head>
   <body>
-    <!-- Navigation bar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">CS 398VL: Template</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
     <!-- Main content -->
     <div class="container" id="content">
       <div class="greeting">
-        <h1>CS398VL Starter Template</h1>
-        <p class="lead">Below is a histogram of data. Isn't it nice?</p>
+        <h1>Beginnings</h1>
+        <p class="lead">This shows the 100 most common starts of
+        sentances in The Once and Future King.</p>
       </div>
-      <div id="main">
+
+    <div id="main">
+      <div id="sequence"></div>
+      <div id="chart">
+        <div id="explanation" style="visibility: hidden;">
+          <span id="percentage"></span><br/>
+          of the sentances begin with this sequence of words
+        </div>
       </div>
+    </div>
       <hr />
       <div class="row">
         <div id="about" class="col-md-6">
           <h3>About this Chart</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>This combines a bit of frequency analysis from last time
+          into a more hierarchical visualization. I took all of the
+          sentances in The Once and Future King and cleaned them so
+          each word just consisted of alphabetic characters or end
+          punctuation (period, exclamation, and question marks). I
+          then cut the sentances short at a max of 4 words and found
+          the 100 most ocmmone starts of sentances. This is just a
+          neat way to view that data, laregly adapted
+          from <a href="http://bl.ocks.org/kerryrodden/7090426"> this
+          chart</a> by <a href="http://www.rodden.org/kerry">Kerry Rodden.</a></p>
         </div>
         <div id="comments" class="col-md-6">
           <div id="disqus_thread"></div>
@@ -75,12 +66,9 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <!-- Your Javascript code should go here. -->
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-      main();
-    </script>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'cs398vlskeleton'; // required: replace example with your forum shortname
+        var disqus_shortname = 'cs398vl-cole'; // required: replace example with your forum shortname
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
